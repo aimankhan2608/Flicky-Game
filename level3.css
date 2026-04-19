@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-      background-image: url(/img/bgmain3.jpeg);
+      background-image: url(img/bgmain3.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -29,7 +29,7 @@
 /* ===== GAME CONTAINER ===== */
 .game-container {
     /* border: 25px solid rgb(3, 0, 189); */
-    background-image: url(/img/bglevel3.jpeg);
+    background-image: url(img/bglevel3.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
