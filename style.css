@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-background-image: url(/img/bgmain1.jpg);  background-repeat: no-repeat;
+background-image: url(img/bgmain1.jpg);  background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -28,7 +28,7 @@ background-image: url(/img/bgmain1.jpg);  background-repeat: no-repeat;
 /* ===== GAME CONTAINER ===== */
 .game-container {
   position: relative;
-  background-image: url(/img/bglevel1.jpeg);
+  background-image: url(img/bglevel1.jpeg);
   background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
