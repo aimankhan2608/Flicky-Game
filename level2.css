@@ -1,0 +1,331 @@
+/* filepath: c:\game2\style.css */
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      background-image: url(/img/bgmain2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  height: 100vh;
+}
+
+
+
+.game-wrapper {
+  position: relative;
+  border: 20px solid rgb(82, 0, 0);
+  width: min(100vw, 100vh * (3500 / 2500)); /* Maintain aspect ratio */
+  height: min(100vh, 100vw * (2500 / 3500));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+/* ===== GAME CONTAINER ===== */
+.game-container {
+    background-image: url(/img/bglevel2.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ===== BABIES ===== */
+.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9 {
+  width: 4%; /* 100px / 3500px */
+  height: 5%; /* 100px / 2500px */
+  position: absolute;
+  z-index: 50;
+}
+
+.b1 { top: 10%; left: 31.43%; } /* 250/2500, 1100/3500 */
+.b2 { top: 4%; left: 74.29%; } 
+.b3 { top: 22%; left: 62.86%; } /* 550/2500, 2200/3500 */
+.b4 { top: 32%; left: 0.71%; } /* 550/2500, 3000/3500 */
+.b5 { top: 44%; left: 72.29%; } /* 1100/2500, 2600/3500 */
+.b6 { top: 52%; left: 20%; } /* 1300/2500, 700/3500 */
+.b7 { top: 32%; left: 20%; } /* 800/2500, 700/3500 */
+.b8 { top: 29%; left: 72.86%; } /* 800/2500, 1500/3500 */
+.b9 { top: 65%; left: 72.86%; } /* 1300/2500, 1500/3500 */
+
+/* ===== HOLES ===== */
+.hole1, .hole3, .hole4 {
+  width: 5.71%; /* 200px / 3500px */
+  height: 6%; /* 150px / 2500px */
+  position: absolute;
+  z-index: 5;
+}
+
+.hole1 { top: 16.8%; left: 30%; } /* 420/2500, 1050/3500 */
+.hole3 { top: 48.8%; left: 72.86%; } /* 1220/2500, 2550/3500 */
+.hole4 { top: 8.8%; left: 72.86%; } /* 220/2500, 2550/3500 */
+
+/* ===== WIND ===== */
+.wind1, .wind2, .wind3, .wind4 {
+  width: 7.14%; /* 250px / 3500px */
+  height: 10%; /* 250px / 2500px */
+  position: absolute;
+  z-index: 2;
+}
+
+.wind1 { top: 35%; left: 10.14%; } /* 700/2500, 1000/3500 */
+.wind2 { top: 55%; left: 25.14%; } /* 1200/2500, 1000/3500 */
+.wind3 { top: 47%; left: 66.15%; } /* 500/2500, 2500/3500 */
+.wind4 { top: 5%; left: 79.43%; } /* 1500/2500, 2500/3500 */
+
+/* ===== pot  ===== */
+.pot1, .pot2, .pot3, .pot4, .pot5, .pot6, .pot7, .pot8 {
+  width: 5%; /* 250px / 3500px */
+  height: 8%; /* 250px / 2500px */
+  position: absolute;
+  z-index: 2;
+}
+.pot1 { top: 37%; left: 22%; }
+/* .pot2 { top: 39%; left: 40%; }  */
+.pot3 { top: 31%; left: 65%; }
+.pot4 { top: 31%; left: 81%; } 
+
+.pot5 { top: 58%; left: 22%; }
+.pot6 { top: 57%; left: 40%; } 
+.pot7 { top: 69%; left: 65%; }
+.pot8 { top: 70%; left: 70%; }
+
+/* ===== STAIRS ===== */
+[class^="pil"] {
+  width: 32.14%; /* 1300px / 3500px */
+  height: 7%; /* 300px / 2500px */
+  position: absolute;
+  z-index: 10;
+}
+
+.pil1 { top: 23%; left: 13.14%; margin: auto; } /* 400/2500, 500/3500 */
+.pil2 { top: 43%; left: 0; } /* 900/2500, 500/3500 */
+.pil3 { top: 63%; left: 16.29%; } /* 1400/2500, 500/3500 */
+.pil4 { top: 15%; left: 63.14%; } /* 700/2500, 2000/3500 */
+.pil5 { top: 35%; left: 42.14%; } /* 1200/2500, 2000/3500 */
+.pil6 { top: 55%; left: 63.14%; } /* 200/2500, 2000/3500 */
+.pil7 { top: 75%; left: 45.50%; } /* 1700/2500, 2000/3500 */
+
+/* ===== GATE ===== */
+.gate {
+  position: absolute;
+  top: 79%; /* 2000/2500 */
+  left: 15.43%; /* 1100/3500 */
+  width: auto; /* Let height control, or set width if needed */
+  height: 20%; /* 500px / 2500px */
+  z-index: 20;
+}
+/* ========CAT======== */
+.cat1 {
+  position: absolute;
+  top: 47%; 
+  left: 70%; 
+  width: 5%; 
+  height: 9%; 
+  z-index: 15;
+}
+.cat2 {
+  position: absolute;
+  top: 5%;
+  left: 70%; 
+  width: 5.5%;
+  height: 12%; 
+  z-index: 15;
+}
+.cat3 {
+  position: absolute;
+  top: 14.5%; 
+  left: 17%; 
+  width: 5%;
+  height: 9%; 
+  z-index: 15;
+}
+.cat4 {
+  position: absolute;
+  top: 55%; 
+  left: 29%; 
+  width: 5%;
+  height: 9%; 
+  z-index: 15;
+}
+.cat5 {
+  position: absolute;
+  top: 25%; 
+  left: 45%; 
+  width: 5.5%;
+  height: 12%; 
+  z-index: 15;
+}
+
+/* ===== FLICKY ===== */
+.flicky {
+  position: absolute;
+  width: 8%; /* 200px / 3500px */
+  height: 10%; /* 200px / 2500px */
+  z-index: 9999;
+}
+
+/* ===== BOTTOM ===== */
+.botm {
+  position: absolute;
+  top: 96%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.botm img {
+  width: 100%;
+  height: 7%; 
+}
+
+/* Media queries for fine-tuning */
+@media (max-width: 767px) {
+  /* On mobile, ensure no overflow and adjust if elements are too small */
+  .game-wrapper { overflow: auto; }
+  /* Optionally increase sizes slightly for touch */
+  .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9 { width: 4%; height: 5%; }
+}
+
+/* ===== WIN POPUP ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+  margin: 0 0 20px;
+}
+
+.popup-content button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup-content button:hover {
+  background: #45a049;
+}
+
+/* ===== LIVES DISPLAY ===== */
+#lives-display {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: white;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+#score-display {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* opposite side of lives */
+    font-size: 24px;
+    color: white;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+/* ===== GAME OVER SCREEN ===== */
+#gameOverText {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: none; /* show via JS */
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, 0.7); /* dark overlay (works on any bg) */
+  z-index: 99999999;
+
+  text-align: center;
+}
+
+/* TEXT */
+#gameOverText h1 {
+  font-size: 80px;
+  color: #ffffff;
+  text-shadow: 4px 4px 0px #000;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+#gameOverText button {
+  padding: 12px 30px;
+  font-size: 20px;
+  font-weight: bold;
+
+  background: #4dbe0c;
+  color: white;
+
+  border: 3px solid #fff;
+  cursor: pointer;
+
+  box-shadow: 4px 4px 0px #000;
+  transition: all 0.1s ease;
+}
+
+/* BUTTON CLICK EFFECT */
+#gameOverText button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+/* HOVER */
+#gameOverText button:hover {
+  background: #943b07;
+}
+
+#gameOverText h1 {
+  color: #fff;
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000;
+}
+#gameOverText button:last-child {
+  background: #2196f3;
+}
+
+#gameOverText button:last-child:hover {
+  background: #0b7dda;
+}

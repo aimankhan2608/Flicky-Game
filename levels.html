@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Level Map</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* MAP BACKGROUND */
+.map {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('img/map.png') no-repeat center;
+  background-size: cover;
+}
+
+/* LEVEL BUTTON */
+.level {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #3aa6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #1d6fb8;
+  transition: 0.2s;
+}
+
+/* HOVER EFFECT */
+.level:hover {
+  transform: scale(1.2);
+}
+
+/* LOCKED LEVEL */
+.locked {
+  background: gray;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* LOCK ICON */
+.lock::after {
+  content: "🔒";
+  position: absolute;
+  font-size: 18px;
+  top: -10px;
+}
+
+/* 🌍 CURVED MAP POSITIONS (adjust as needed) */
+.level[data-level="1"] { bottom: 50px; left: 45%; }
+.level[data-level="2"] { bottom: 130px; left: 65%; }
+.level[data-level="3"] { bottom: 210px; left: 35%; }
+.level[data-level="4"] { bottom: 300px; left: 60%; }
+.level[data-level="5"] { bottom: 390px; left: 30%; }
+.level[data-level="6"] { bottom: 480px; left: 55%; }
+.level[data-level="7"] { bottom: 570px; left: 40%; }
+.level[data-level="8"] { bottom: 660px; left: 60%; }
+
+</style>
+</head>
+
+<body>
+
+<div class="map">
+
+  <div class="level" data-level="1">1</div>
+  <div class="level locked" data-level="2">2</div>
+  <div class="level locked" data-level="3">3</div>
+  <div class="level locked" data-level="4">4</div>
+  <div class="level locked" data-level="5">5</div>
+  <div class="level locked" data-level="6">6</div>
+  <div class="level locked" data-level="7">7</div>
+  <div class="level locked" data-level="8">8</div>
+
+</div>
+
+<script>
+
+let unlockedLevel = localStorage.getItem("unlockedLevel") || 1;
+const levels = document.querySelectorAll(".level");
+
+levels.forEach(level => {
+  let levelNum = parseInt(level.dataset.level);
+
+  // Unlock logic
+  if (levelNum <= unlockedLevel) {
+    level.classList.remove("locked");
+  } else {
+    level.classList.add("locked");
+  }
+
+  level.addEventListener("click", () => {
+
+    if (levelNum > unlockedLevel) return;
+
+    // 🔗 LEVEL PAGE LINKING
+    window.location.href = "level" + levelNum + ".html";
+
+  });
+});
+
+</script>
+
+</body>
+</html>
